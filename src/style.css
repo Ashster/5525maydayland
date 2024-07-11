@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #app{
+
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sphere-container{
+  position: relative;
+}
+
+.sphere-body{
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.sphere-eye{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
+} */
+
+/* #ashin .sphere-body{
+  background-color: #e86ca5;
+}
+
+#stone .sphere-body{
+  background-color: #22a93a;
+}
+
+#monster .sphere-body{
+  background-color: #dc3320;
+}
+
+#ming .sphere-body{
+  background-color: #29a7e1;
+}
+
+#masa .sphere-body{
+  background-color: #efce3e;
+} */
