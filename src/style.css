@@ -2,57 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #app{
-
+.stage {
+  -webkit-perspective: 192rem;
+  -moz-perspective: 192rem;
+  -ms-perspective: 192rem;
+  -o-perspective: 192rem;
+  perspective: 192rem;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
 }
 
-.wrapper{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sphere-container{
+.ball {
+  display: inline-block;
   position: relative;
 }
 
-.sphere-body{
-  box-sizing: border-box;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-}
-
-.sphere-eye{
+.ball:before {
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  width: 10px;
-  height: 10px;
-  background-color: white;
+  bottom: 2.5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 120%,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0) 70%
+  );
+  filter: blur(0.625rem);
+  z-index: 2;
+}
+
+.ball:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8) 14%,
+    rgba(255, 255, 255, 0) 24%
+  );
+  transform: translateX(-4rem) translateY(-4rem) skewX(-30deg);
+  filter: blur(10px);
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  transform: rotateX(90deg) translateZ(-6rem);
+  z-index: -1;
+}
+
+.face {
+  width: 40%;
+  height: 40%;
+  margin: 30%;
   border-radius: 100%;
-} */
-
-/* #ashin .sphere-body{
-  background-color: #e86ca5;
+  /* transform: translateX(50%) translateY(-50%) skewX(15deg) skewY(2deg); */
+  position: absolute;
+  animation: move-face-bottom-left-to-top-right 5s ease-out infinite;
 }
 
-#stone .sphere-body{
-  background-color: #22a93a;
+@keyframes move-face-bottom-left-to-top-right {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateX(-50%) translateY(38%) skewX(5deg) skewY(-2deg) scale(0.95);
+  }
+  50%{
+    transform: none;
+  }
+  75% {
+    transform: translateX(50%) translateY(-40%) skewX(5deg) skewY(2deg) scaleX(0.95);
+  }
+  100% {
+    transform: none;
+  }
 }
 
-#monster .sphere-body{
-  background-color: #dc3320;
+.pink-gradient {
+  background: linear-gradient(153deg, #f95697 0%, #f63f75 100%);
 }
 
-#ming .sphere-body{
-  background-color: #29a7e1;
+.yellow-gradient {
+  background: linear-gradient(153deg, #fdb644 0%, #fd9733 100%);
 }
 
-#masa .sphere-body{
-  background-color: #efce3e;
-} */
+.red-gradient {
+  background: linear-gradient(153deg, #fd3b1f 0%, #d72e47 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(153deg, #45a3f0 0%, #4984ef 100%);
+}
+
+.green-gradient {
+  background: linear-gradient(153deg, #1fffa7 0%, #22e3a7 100%);
+}
