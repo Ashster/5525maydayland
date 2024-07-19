@@ -1,0 +1,8 @@
+/* animation */
+@mixin bounce {
+    animation: bounce 2s infinite;
+}
+
+@mixin swing {
+    animation: swing 2s infinite;
+}
